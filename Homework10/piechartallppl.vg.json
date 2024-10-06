@@ -1,30 +1,32 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "All people",
+    "title": "Assistance Needs by Age Range: All Aboriginal and Torres Strait Islander",
     "data": {
-        "url": "Allpeople.csv"
+        "url": "https://raw.githubusercontent.com/nhuy0017/FIT3179/main/Homework10/Allpeople.csv"
     },
     "params": [
         {
-            "name": "Age_selection",
+            "name": "AgeRangeSelection",
             "bind": {
                 "input": "select",
                 "options": [
-                    "All",
-                    "Under 15",
-                    "15 to 24 years",
-                    "25 to 34 years",
-                    "35 to 44 years",
-                    "44 to 54 years",
-                    "55 to 64 years",
-                    "65 years and over"
-                ]
-            }
+                    "All Aboriginal and Torres Strait Islander people",
+                    "Under_15_years",
+                    "15to24_years",
+                    "25to34_years",
+                    "35to44_years",
+                    "45to54_years",
+                    "55to64_years",
+                    "65_years_and_over"
+                ],
+                "name": "Select Age Range: "
+            },
+            "value": "All Aboriginal and Torres Strait Islander people"
         }
     ],
     "transform": [
         {
-            "filter": "if(Age_selection!=null, datum.age == Age_selection, datum.age == 'All')"
+            "filter": "datum.age_range == AgeRangeSelection"
         }
     ],
     "encoding": {
@@ -36,26 +38,27 @@
         "color": {
             "field": "category", 
             "type": "nominal",
-            "scale": {"scheme": "redblue-6"},
-            "title": "Age"
+            "scale": {"scheme": "category10"},
+            "title": "Category"
         },
         "tooltip": [
-            {"field": "category", "type": "nominal", "title": "Assistance need"},
-            {"field": "value", "type": "quantitative", "title": "Count of persons"}
+            {"field": "category", "type": "nominal", "title": "Assistance Need"},
+            {"field": "value", "type": "quantitative", "title": "Count of Persons"}
         ]
     },
     "layer": [
         {
-            "mark": {"type": "arc", "outerRadius": 80, "innerRadius": 40}
+            "mark": {"type": "arc", "outerRadius": 80, "innerRadius": 0}
         },
         {
             "mark": {
-                "type": "text", 
+                "type": "text",
                 "radius": 90
+              
             },
             "encoding": {
                 "text": {"field": "value", "type": "quantitative"}
             }
         }
-    ] 
-}   
+    ]
+}
