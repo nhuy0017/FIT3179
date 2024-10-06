@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Assistance Needs by Age Range: All Aboriginal and Torres Strait Islander",
+    "title": "Assistance Needs by Age Range: All Male Aboriginal and Male Torres Strait Islander",
     "data": {
         "url": "https://raw.githubusercontent.com/nhuy0017/FIT3179/main/Homework10/Males.csv"
     },
