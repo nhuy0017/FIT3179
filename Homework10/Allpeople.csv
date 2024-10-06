@@ -1,9 +1,25 @@
-﻿age_range,has_need_for_assistance_with_core_activities,not_have_need_for_assistance_with_core,need_for_assistance_not_stated,total
-All Aboriginal and Torres Strait Islander people,"43,751","565,874","39,547","649,171"
-Under_15_years,"9,624","200,967","9,814","220,394"
-15to24_years,"5,101","110,835","7,782","123,719"
-25to34_years,"3,340","77,361","8,153","88,861"
-35to44_years,"4,077","62,245","6,076","72,394"
-45to54_years,"6,464","56,909","4,036","67,415"
-55to64_years,"6,657","36,667","2,100","45,433"
-65_years_and_over,"8,481","20,884","1,590","30,952"
+﻿age_range,value,category,
+All Aboriginal and Torres Strait Islander people,43751,has need for assistance with core activities,
+All Aboriginal and Torres Strait Islander people,565874,not have need for assistance with core,
+All Aboriginal and Torres Strait Islander people,39547,need for assistance not stated,`
+Under_15_years,9624,has need for assistance with core activities,
+Under_15_years,200967,not have need for assistance with core,
+Under_15_years,9814,need for assistance not stated,
+15to24_years,5101,has need for assistance with core activities,
+15to24_years,110835,not have need for assistance with core,
+15to24_years,7782,need for assistance not stated,
+25to34_years,3340,has need for assistance with core activities,
+25to34_years,77361,not have need for assistance with core,
+25to34_years,8153,need for assistance not stated,
+35to44_years,4077,has need for assistance with core activities,
+35to44_years,62245,not have need for assistance with core,
+35to44_years,6076,need for assistance not stated,
+45to54_years,6464,has need for assistance with core activities,
+45to54_years,56909,not have need for assistance with core,
+45to54_years,4036,need for assistance not stated,
+55to64_years,6657,has need for assistance with core activities,
+55to64_years,36667,not have need for assistance with core,
+55to64_years,2100,need for assistance not stated,
+65_years_and_over,8481,has need for assistance with core activities,
+65_years_and_over,20884,not have need for assistance with core,
+65_years_and_over,1590,need for assistance not stated,

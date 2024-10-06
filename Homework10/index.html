@@ -11,5 +11,15 @@
     <script src="piechartfemales.js"></script>
     <script src="piechartmales.js"></script>
 </head>
-</head>
+
+<body>
+    <h1>Core Activities Need for Assistance by Age(s), Aboriginal and Torres Strait Islander people (counts of persons)</h1>
+    <div id="piechartallppl"></div>
+    <script type="text/javascript">
+        var spec1 = "piechartallppl.vg.json";
+        vegaEmbed('#donut_chart_total', spec1).then(function(result) {
+        }).catch(console.error);
+    </script>
+    
+</body>
 </html>

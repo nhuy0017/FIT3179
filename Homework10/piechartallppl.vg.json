@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "All people",
+    "data": {
+        "url": "Allpeople.csv"
+    },
+    "params": [
+        {
+            "name": "Age_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "All",
+                    "Under 15",
+                    "15 to 24 years",
+                    "25 to 34 years",
+                    "35 to 44 years",
+                    "44 to 54 years",
+                    "55 to 64 years",
+                    "65 years and over"
+                ]
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "if(Age_selection!=null, datum.age == Age_selection, datum.age == 'All')"
+        }
+    ],
+    "encoding": {
+        "theta": {
+            "field": "value", 
+            "type": "quantitative",
+            "stack": true
+        },
+        "color": {
+            "field": "category", 
+            "type": "nominal",
+            "scale": {"scheme": "redblue-6"},
+            "title": "Age"
+        },
+        "tooltip": [
+            {"field": "category", "type": "nominal", "title": "Assistance need"},
+            {"field": "value", "type": "quantitative", "title": "Count of persons"}
+        ]
+    },
+    "layer": [
+        {
+            "mark": {"type": "arc", "outerRadius": 80, "innerRadius": 40}
+        },
+        {
+            "mark": {
+                "type": "text", 
+                "radius": 90
+            },
+            "encoding": {
+                "text": {"field": "value", "type": "quantitative"}
+            }
+        }
+    ] 
+}   
