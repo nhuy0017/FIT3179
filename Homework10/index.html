@@ -12,15 +12,22 @@
 
 <body>
     <h1>Core Activities Need for Assistance by Age(s), Aboriginal and Torres Strait Islander people (counts of persons)</h1>
-    
+    <div class = "visualization">
     <div id="piechartallppl"></div>
-
-    <script type="text/javascript">
-        var spec1 = "piechartallppl.vg.json";
-        vegaEmbed('#piechartallppl', spec1).then(function(result) {
-            // Optional: handle the result
-        }).catch(console.error);
-    </script>
+        <script type="text/javascript">
+            var spec1 = "piechartallppl.vg.json";
+            vegaEmbed('#piechartallppl', spec1).then(function(result) {
+                // Optional: handle the result
+            }).catch(console.error);
+        </script>
+    <div id="piechartfemales"></div>
+        <script type="text/javascript">
+            var spec2 = "piechartfemales.vg.json";
+            vegaEmbed('#piechartfemales', spec2).then(function(result) {
+                // Optional: handle the result
+            }).catch(console.error);
+        </script>
+    </div>
     
 </body>
 </html>
